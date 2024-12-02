@@ -1,0 +1,136 @@
+/* Reset basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #000000;
+  color: #FFFFFF;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px; /* Ensure it doesn’t stretch too wide on larger screens */
+}
+
+/* Title styling */
+.title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem; /* Change to relative units */
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  /*text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.8);*/
+  margin-bottom: 20px;
+}
+
+/* Image container styling */
+.image-container {
+  width: 80%;
+  max-width: 914px; /* Set max-width for responsiveness */
+  height: auto; /* Ensure it scales proportionally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Placeholder image styling */
+.placeholder-image {
+  width: 100%; /* Allow image to be fully responsive */
+  height: auto;
+  object-fit: contain;
+  border: 1px solid hsl(184, 100%, 50%);
+  /*box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);*/
+}
+
+/* Social media icons container (Flexbox) */
+.social-links {
+  display: flex;
+  justify-content: center; /* Center the icons */
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+  width: 100%; /* Ensure the container takes full width of the parent */
+  max-width: 400px; /* Restrict the maximum width */
+}
+
+/* Social icon item styling */
+.social-icon {
+  width: 20%; /* Make social icons responsive, width will scale */
+  max-width: 60px; /* Set maximum size */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tiktok-icon{
+  width:35%;
+  max-width: 120px;
+}
+
+
+.social-icon img {
+  width: 100%; /* The images will take the full width of their container */
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover img {
+  transform: scale(1.2);
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem; /* Adjust title size for smaller screens */
+  }
+
+  .image-container {
+    width: 90%; /* Adjust image container width */
+  }
+
+  .social-links {
+    max-width: 300px; /* Shrink the icon container further on tablets */
+    gap: 15px; /* Adjust spacing */
+  }
+
+  .social-icon {
+    width: 15%; /* Slightly increase icon size on medium screens */
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem; /* Further reduce title size for very small screens */
+  }
+
+  .social-icon {
+    width: 20%; /* Increase icon size to make them more visible on small screens */
+    max-width: 40px;
+  }
+
+  .social-links {
+    flex-direction: column; /* Stack the social icons vertically */
+    gap: 15px;
+    max-width: 280px; /* Further reduce the width */
+  }
+}
